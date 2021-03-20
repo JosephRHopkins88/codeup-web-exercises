@@ -8,7 +8,9 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-
+function sayHello(name) {
+        return "Hello, " + name;
+}
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -16,6 +18,9 @@
  *
  * console.log 'helloMessage' to check your work
  */
+var helloMessage = sayHello("Joseph Hopkins");
+
+console.log(helloMessage);
 
 /**
  * TODO:
@@ -23,6 +28,9 @@
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+var myName = "Joe";
+console.log(sayHello(myName));
+
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -45,7 +53,15 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+function isTwo(num) {
+        return num === 2;
+}
 
+console.log(isTwo(1));
+console.log(isTwo(2));
+console.log(isTwo(3));
+
+console.log(isTwo(random));
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -57,6 +73,12 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
+var calculateTip = function (tip, bill) {
+        return tip * bill;
+}
+
+var tip1 = calculateTip(.20, 20);
+console.log("Your calculated tip was: $" + tip1.toFixed(2));
 
 /**
  * TODO:
@@ -64,6 +86,13 @@ var random = Math.floor((Math.random() * 3) + 1);
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+var bill = parseFloat(prompt("How much was your bill?"));
+var tipPercentage = parseFloat(prompt("What percentage would you like to tip? (In decimal please)"));
+
+var tipAmount = calculateTip(tipPercentage, bill);
+var total = bill + tipAmount;
+
+alert("Your bill came out to $" + bill.toFixed(2) + ". You decided to tip a generous " + (tipPercentage * 100) + "%, which will result in $" + tipAmount.toFixed(2) + " to be added to your final total for this evening. Your final check is: $" + total.toFixed(2) + ".");
 
 /**
  * TODO:
@@ -79,3 +108,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount(originalPrice, markDownPercentage) {
+        var priceAfterDiscount = originalPrice - (originalPrice * markDownPercentage);
+        return priceAfterDiscount;
+}
+
+console.log(applyDiscount(100, .2));
