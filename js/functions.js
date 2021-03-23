@@ -102,6 +102,13 @@ alert("Your bill came out to $" + bill.toFixed(2) + ". You decided to tip a gene
  * price.
  *
  * Example:
+ * Joe goes into a store and he wants to buy a shirt that is 100 (price before discount applied).
+ * It is currently 20% off (discount percentage). When he checks out the shirt will cost how much? (this is the number you must return).
+ *
+ * In this case, 100 at a 20% discount = 80 dollars.
+ *
+ *
+ * Example:
  * > var originalPrice = 100;
  * > var dicountPercent = .2; // 20%
  * > applyDiscount(originalPrice, dicountPercent) // 80
@@ -110,8 +117,38 @@ alert("Your bill came out to $" + bill.toFixed(2) + ". You decided to tip a gene
  */
 
 function applyDiscount(originalPrice, markDownPercentage) {
+
         var priceAfterDiscount = originalPrice - (originalPrice * markDownPercentage);
         return priceAfterDiscount;
 }
 
 console.log(applyDiscount(100, .2));
+
+function applyDiscount2(originalPrice, markDownPercentage) {
+//multiply the original price by the discount percentage
+        var discount = originalPrice * markDownPercentage; //100 * .2 == 20
+        //once i have the discount figured out i need to subtract it from the original price
+        var priceAfterDiscount = originalPrice - discount; //100 - 20 = 80
+        //return the final value
+        return priceAfterDiscount;//80
+}
+
+console.log(applyDiscount2(100, .2));
+
+
+
+//HACK: DELETE THIS FUNCTION
+//TODO:
+function ORIGINAL_applyDiscount2(originalPrice, markDownPercentage) {
+//multiply the original price by the discount percentage
+        var discount = originalPrice * markDownPercentage; //100 * .2 == 20
+        //once i have the discount figured out i need to subtract it from the original price
+        var priceAfterDiscount = originalPrice - discount; //100 - 20 = 80
+        //return the final value
+        return priceAfterDiscount;//80
+}
+
+console.log(applyDiscount2(100, .2));
+
+
+
