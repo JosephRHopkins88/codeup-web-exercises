@@ -45,3 +45,34 @@
 //     console.log(counter);
 //     counter = counter -1;
 // }
+
+// DO WHILE LOOP
+
+// var number = Math.floor(Math.random() * 6) + 1;
+// var guess;
+//
+// do{
+//     guess = parseInt(prompt("Enter a number between 1 and 6"));
+// } while (guess !== number);
+//
+// alert("Your guess of " + guess + " matches the random number generated " + number + "!");
+
+// FOR LOOPS
+
+// var count = 100;
+// while (count >= 0) {
+//     console.log(count);
+//     count = count - 1;
+// }
+
+// short hand way
+
+// for (count = 100; count >= 0; count = count - 1) {
+//     console.log(count);
+// }
+
+// shorter hand
+
+for (var i = 100; i >= 0; i--) {
+    console.log(i);
+}
