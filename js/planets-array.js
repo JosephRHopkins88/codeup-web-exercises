@@ -36,13 +36,10 @@
 
     console.log('Finding and logging the index of "Earth" in the planets array.');
     console.log(planets.indexOf('Earth'));
+
     console.log("Reversing the order of the planets array.");
-    function copyOfArray(array) {
-        return array.slice();
-    }
-    var reversedPlanets = copyOfArray(planets);
-    reversedPlanets.reverse();
-    console.log(reversedPlanets);
+    planets.reverse();
+    console.log(planets);
 
     console.log("Sorting the planets array.");
     planets.sort();

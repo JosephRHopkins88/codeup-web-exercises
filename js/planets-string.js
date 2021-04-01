@@ -10,7 +10,7 @@
      * planetsArray.
      * console.log planetsArray to check your work
      */
-     var planetsArray = planetsString.split('|');
+     planetsArray = planetsString.split('|');
      console.log(planetsArray);
 
     /**
@@ -24,9 +24,19 @@
      * string, and <li> tags around each planet.
      */
 
-    var planetsString = "Mercury <br> Venus <br> Earth <br> Mars <br> Jupiter <br> Saturn <br> Uranus <br> Neptune <br>";
-    console.log(planetsString);
+    var brPlanets = planetsArray.join("<br>")
+    console.log(brPlanets);
+    console.log(planetsArray);
 
+    var planetsList = "<ul>";
 
+    planetsArray.forEach(function(planet) {
+        planetsList += "<li>" + planet + "</li>";
+    })
+    planetsList += "</ul>";
+
+    console.log(planetsList);
+
+    document.getElementById('planets').innerHTML = planetsList;
 
 })();
