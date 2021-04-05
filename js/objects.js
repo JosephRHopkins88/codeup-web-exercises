@@ -11,14 +11,14 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-//
-// var person = {
-//     firstName: "Joseph",
-//     lastName: "Hopkins",
-//     }
-//
-//     console.log(person.firstName);
-//     console.log(person.lastName);
+
+var person = {
+    firstName: "Joseph",
+    lastName: "Hopkins",
+    }
+
+    console.log(person.firstName);
+    console.log(person.lastName);
 
     /**
      * TODO:
@@ -29,15 +29,15 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-//     var person = {
-//         firstName: "Joseph",
-//         lastName: "Hopkins",
-//         sayHello: function () {
-//             return "Hello from " + this.firstName + " " + this.lastName + "!";
-//         }
-// }
-//
-// console.log(person.sayHello());
+    var person = {
+        firstName: "Joseph",
+        lastName: "Hopkins",
+        sayHello: function () {
+            return "Hello from " + this.firstName + " " + this.lastName + "!";
+        }
+}
+
+console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -53,25 +53,25 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
-    //
-    // shoppers.forEach(function (shopper){
-    //     var shopperName = shopper.name;
-    //     var amountSpent = "$" + shopper.amount.toFixed(2);
-    //     var discount = 0;
-    //     if (shopper.amount > 200) {
-    //         discount = shopper.amount * .12;
-    //     }
-    //     var amountAfterDiscount = shopper.amount - discount;
-    //     amountAfterDiscount = "$" + amountAfterDiscount.toFixed(2);
-    //     discount = "$" + discount.toFixed(2);
-    //     var message = shopperName + " spent " + amountSpent + "." + "Their discount is " + discount + "." + "The amount after discount is " + amountAfterDiscount + ".";
-    //     console.log(message);
-    // });
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    shoppers.forEach(function (shopper){
+        var shopperName = shopper.name;
+        var amountSpent = "$" + shopper.amount.toFixed(2);
+        var discount = 0;
+        if (shopper.amount > 200) {
+            discount = shopper.amount * .12;
+        }
+        var amountAfterDiscount = shopper.amount - discount;
+        amountAfterDiscount = "$" + amountAfterDiscount.toFixed(2);
+        discount = "$" + discount.toFixed(2);
+        var message = shopperName + " spent " + amountSpent + "." + "Their discount is " + discount + "." + "The amount after discount is " + amountAfterDiscount + ".";
+        console.log(message);
+    });
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -113,10 +113,10 @@
             lastName: 'Lob',
             }},
     ]
-
-    console.log(books[4].name);
-    console.log(books[4].author.firstName);
-    console.log(books[4].author.lastName);
+    //
+    // console.log(books[0].name);
+    // console.log(books[0].author.firstName);
+    // console.log(books[0].author.lastName);
 
     /**
      * TODO:
@@ -143,13 +143,13 @@
      *      ...
      */
 
-// for(var i=0; i<books.length; i++)
-// {
-//     console.log("Book #: " + parseInt(i+1));
-//     console.log("Title: " + books[i].name);
-//     console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName)
-//     console.log("---");
-// }
+for(var i=0; i<books.length; i++)
+{
+    console.log("Book # " + parseInt(i+1));
+    console.log("Title: " + books[i].name);
+    console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName)
+    console.log("---");
+}
 
 
     /**
@@ -162,5 +162,37 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    // function createBook (title, author) {
+    //     var nameArray = author.split(" ");
+    //     var firstName = nameArray[0];
+    //     var lastName = nameArray[1];
+    //     return {
+    //         title: title,
+    //         author: {
+    //             firstName: firstName,
+    //             lastName: lastName
+    //         }
+    //     }
+    // }
+    //
+    // books.push(createBook(" ", "No One"));
+    //
+    // for(var i=0; i<books.length; i++)
+    // {
+    //     console.log("Book # " + parseInt(i+1));
+    //     console.log("Title: " + books[i].name);
+    //     console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName)
+    //     console.log("---");
+    // }
+    //
+    // function showBookInfo(books, bookNumber) {
+    //     console.log("Book # " + parseInt(i+1));
+    //     console.log("Title: " + books[i].name);
+    //     console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName)
+    //     console.log("---");
+    // }
+
+
 
 })();
