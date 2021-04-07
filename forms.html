@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Forms</title>
+    <title>Register With Us</title>
 </head>
 <body>
 
-<h1>Forms</h1>
-<h2>Forms exercise!!!</h2>
+<h1>Register With Us</h1>
+
 <hr>
 
     <form method="POST" action="https://request-inspector.glitch.me/">
@@ -18,18 +18,18 @@
 <!--    <input id="submit" name="submit" type="Submit" />-->
 <!--</form>-->
 
-        <label for="username">Username</label>
-        <input id="username" name="username" type="text">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="text" placeholder="Enter email here">
         <br>
 
         <label for="password">Password</label>
-        <input id="password" name="password" type="password">
+        <input id="password" name="password" type="password" placeholder="Enter password here">
         <br>
 
         <br>
         <label for="body-text">Bio</label>
         <br>
-        <textarea name="body" id="body-text" cols="30" rows="10"></textarea>
+        <textarea name="bio" id="body-text" placeholder="Please tell us about yourself" cols="30" rows="10"></textarea>
         <br>
 
         <h3>How'd you hear about us?</h3>
@@ -53,7 +53,7 @@
         <h3>
             <label for="Web-browser-used">What web browser are you using?</label>
         </h3>
-        <select id="Web-browser-used">
+        <select name="WebBrowser" id="Web-browser-used">
             <option value="Chrome">Google Chrome</option>
             <option value="Explorer">Internet Explorer</option>
             <option value="Firefox">Firefox</option>
@@ -62,7 +62,7 @@
         <br>
 
         <br>
-        <button type="submit">Welcome</button>
+        <button type="submit">Submit</button>
 
     </form>
 </body>
