@@ -1,0 +1,54 @@
+h1, h2 {
+    color: purple;
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    margin-bottom: 225px;
+    background-image: url(../img/codeup-logo.png);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-color: lightgray;
+    font-family: "Arial Narrow";
+}
+
+main {
+    color: #0404ac;
+}
+
+ul, ol, p {
+    color: brown;
+    font-family: sans-serif;
+}
+
+ul {
+    list-style: circle;
+}
+
+a {
+    hover: blue;
+}
+
+td
+{
+    font-size:14px;
+    color:#fff;
+    padding-left:10px;
+    padding-top:20px;
+    padding-right:10px;
+    padding-bottom:20px;
+}
+tr{
+    background-color:#000;
+    text-align: center;
+}
+th{
+    color:#fff;
+    font-size:20px;
+    padding: 10px 20px 10px 20px;
+}
+
