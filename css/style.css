@@ -1,5 +1,5 @@
 h1, h2 {
-    color: purple;
+    color: olive;
     text-decoration: underline;
 }
 
@@ -29,21 +29,13 @@ body {
     }
 }
 
-main {
-    color: #0404ac;
-}
-
 ul, ol, p {
-    color: brown;
+    color: darkgreen;
     font-family: sans-serif;
 }
 
 ul {
     list-style: circle;
-}
-
-a {
-    hover: blue;
 }
 
 td
