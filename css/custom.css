@@ -1,0 +1,27 @@
+.jumbotron {
+    background-image: url("../img/pizza.png");
+    background-size: cover;
+}
+
+.opaque-bg {
+    background: rgba(255,255,255, .7);
+    width: 100%;
+}
+
+.display-4 {
+    color: dimgray;
+    text-align: center;
+}
+
+#signup {
+    color: #848487;
+    padding-left: 0;
+}
+
+.fas-fa-user {
+    margin-right: auto;
+}
+
+h2 {
+    font-size: 27px;
+}
