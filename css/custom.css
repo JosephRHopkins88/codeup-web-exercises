@@ -25,3 +25,9 @@
 h2 {
     font-size: 27px;
 }
+
+.card-header {
+    background: #3B94D9;
+    color: white;
+}
+

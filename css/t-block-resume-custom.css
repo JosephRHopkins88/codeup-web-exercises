@@ -1,0 +1,31 @@
+
+
+h1 {
+    padding-bottom: 1em;
+}
+
+.fas {
+    margin-right: 5px;
+}
+
+.fab {
+    margin-right: 5px;
+}
+
+.d-inline {
+    font-weight: bold;
+}
+
+.card {
+    border: none;
+}
+
+.change-h2 {
+    color: #3B94D9;
+}
+
+hr {
+    border-width: 1em;
+    background-color: #89a26b;
+}
+
