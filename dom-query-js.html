@@ -62,9 +62,9 @@
 
     var subParagraph = document.getElementsByClassName("sub-paragraph");
 
-    function fontChange () {
-      subParagraph[0].innerHTML = "Mission Accomplished!";
-    }
+    // function fontChange () {
+    //   subParagraph[0].innerHTML = "Mission Accomplished!";
+    // }
 
 
     document.querySelector("#mainTitle").addEventListener("click", titleChange)
@@ -78,7 +78,10 @@
         }
       }
     })
-    document.querySelector("#fontChange").addEventListener("click", fontChange);
+    document.getElementById("fontChange").addEventListener("click", function () {
+      subParagraph[0].innerHTML = "Mission Accomplished!";
+    })
+    // document.querySelector("#fontChange").addEventListener("click", fontChange);
 
   })();
 </script>
