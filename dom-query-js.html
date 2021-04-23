@@ -3,11 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>DOM: Query and Modify</title>
-  <style>
-    .blue {
-      color: blue;
-    }
-  </style>
 </head>
 <body>
 
@@ -30,38 +25,63 @@
   culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="mainTitle" type="button">Change main header</button>
+<button id="subTitle" type="button">Change sub header color</button>
+<button id="listColor" type="button">Change list colors</button>
+<button id="fontChange" type="button">Paragraph change</button>
+
+
 <script>
   (function() {
     "use strict";
-    // TODO: Uncomment next line and get the main header element by id
+
     var mainHeader = document.getElementById("main-header");
 
-    // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-  mainHeader.innerHTML = "JavaScript is cool";
-    // TODO: Uncomment the next line and get the sub header element by id
+
+    var titleChange = function () {
+      mainHeader.innerHTML = "JavaScript is cool";
+    };
+
     var subHeader = document.getElementById("sub-header");
 
-    // TODO: Set the text color of subHeader to blue
+  function subHeaderChange () {
     subHeader.style.color = "blue";
-    // TODO: Uncomment the next line and get all list items
+  }
+
+
     var listItems = document.getElementsByTagName("li");
 
-    // TODO: Set text color on every other list item to grey
-    // TODO: Set text color of li with dbid = 1 to blue
-    for (var i = 0; i < listItems.length; i++) {
-      if ((i+1) % 2 === 0) {
-        listItems[i].style.color = 'grey';
-      } else if (listItems[i].getAttribute('data-dbid') === '1') {
-        listItems[i].style.color = 'blue';
-      }
-    }
-    // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+
+    // for (var i = 0; i < listItems.length; i++) {
+    //   if ((i+1) % 2 === 0) {
+    //     listItems[i].style.color = 'grey';
+    //   } else if (listItems[i].getAttribute('data-dbid') === '1') {
+    //     listItems[i].style.color = 'blue';
+    //   }
+    // }
+
     var subParagraph = document.getElementsByClassName("sub-paragraph");
 
-    // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-    subParagraph[0].innerHTML = "Mission Accomplished!";
+    function fontChange () {
+      subParagraph[0].innerHTML = "Mission Accomplished!";
+    }
+
+
+    document.querySelector("#mainTitle").addEventListener("click", titleChange)
+    document.querySelector("#subTitle").addEventListener("click", subHeaderChange)
+    document.querySelector("#listColor").addEventListener("click", function () {
+      for (var i = 0; i < listItems.length; i++) {
+        if ((i+1) % 2 === 0) {
+          listItems[i].style.color = 'grey';
+        } else if (listItems[i].getAttribute('data-dbid') === '1') {
+          listItems[i].style.color = 'blue';
+        }
+      }
+    })
+    document.querySelector("#fontChange").addEventListener("click", fontChange);
 
   })();
 </script>
+<script src="dom-query.js"></script>
 </body>
 </html>
