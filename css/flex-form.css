@@ -12,10 +12,10 @@ body {
     overflow: hidden;
 }
 
-.puppiness {
-    height: 100%;
+.movingClouds {
+    height: 33%;
     position: absolute;
-    top: 0;
+    top: 2em;
     width: 100%;
     object-fit: cover;
 }
