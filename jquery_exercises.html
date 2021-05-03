@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>jQuery Introduction</title>
     <style>
-        /*h1 {color: }*/
+        /*h1 {color: red}*/
     </style>
 </head>
 <body>
@@ -23,6 +23,7 @@
 <p id="doggysFaveFoods">Not going to get the red border</p>
 <script src="js/jquery-3.6.0.min.js"></script>
 <script>
+
     $(document).ready(function(){
         // alert("your page has finished loading");
         // to get the text only
@@ -33,17 +34,34 @@
         // var theListIntro = $("#introToTheList").html();
         // alert(theListIntro);
         //    $(".doggysFaveFoods").css("border", "solid red 1px");
-        $("li").css("font-size", "20px");
-        $("h1, p, li").css("background-color", "palegoldenrod");
-        var theHeadersContent = $("h1").html();
-        //alert(theHeadersContent);
-        var theListItems = $("li").each(function(){
-            alert($(this).html());
-            // doesn't work:
-            // alert($("li").html());
-        });
+        // $("li").css("font-size", "20px");
+        // $("h1, p, li").css("background-color", "palegoldenrod");
+        // var theHeadersContent = $("h1").html();
+        // //alert(theHeadersContent);
+        // var theListItems = $("li").each(function(){
+        //     alert($(this).html());
+        //     // doesn't work:
+        //     // alert($("li").html());
+        // });
 
         // alert(theListItems);
+
+        $('h1').click(function () {
+            $(this).css('background-color', 'red');
+        })
+
+        $('p').dblclick(function () {
+            // $('p').css('font-size', '18px'); single 'p' at a time
+            $('p').css('font-size', '18px');
+        //    all 'p' on the page at once
+        })
+
+        $('li').hover(function () {
+            $(this).css('color', 'red');
+        }, function () {
+            $(this).css('color', 'black');
+        })
+
     });
 </script>
 </body>
