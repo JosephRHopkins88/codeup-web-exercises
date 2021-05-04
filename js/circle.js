@@ -1,4 +1,4 @@
-(function() {
+(function () {
     "use strict";
 
     // create a circle object
@@ -9,14 +9,14 @@
 
             // TODO: complete this method
             // hint: area = pi * radius^2
-            return Math.PI * Math.pow(this.radius,2);
+            return Math.PI * Math.pow(this.radius, 2);
 
             // TODO: return the proper value
         },
 
         logInfo: function (doRounding) {
             // TODO: complete this method.
-            if (doRounding === true){
+            if (doRounding === true) {
                 return console.log(Math.ceil(this.getArea()));
             } else {
                 return console.log(this.getArea());
