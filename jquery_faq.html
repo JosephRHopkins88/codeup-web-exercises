@@ -2,9 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>FAQ</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+
+        .highlight {
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
+<h1 style="text-align: center">National Park FAQ (Top 10)</h1>
+<dl>
+<!--    question 1-->
+    <dt>What time does the park close?</dt>
+    <dd>All National Parks close at dusk.</dd>
+<!--    question 2-->
+    <dt>Can I have a picnic while visiting?</dt>
+    <dd>Yes, we just ask that you clean up after yourself. Also if you see/hear a talking bear and his little bear friend please do not let them take you picnic basket.</dd>
+<!--    question 3-->
+    <dt>Are the wild animals dangerous?</dt>
+    <dd>Yes, please do not feed or try to pet the wild animals. If see you and the party you are with may be subject to a fine of $10,000 and/or up to 3 months jail time.</dd>
+<!--    question 4-->
+    <dt>Can bikes be ridden on the trails?</dt>
+    <dd>Yes, we have special trails for bikes only. Please stay on the bike trails and not on the walking/jogging trails. Safety equipment is optional but highly recommended.</dd>
+<!--    question 5-->
+    <dt>How long are the trails?</dt>
+    <dd>The trails vary in size and skill level. Once you enter the park you will be given a map. On the map the trails will be labeled. Please remember to hydrate and bring plenty of water (refill stations can be found throughout the park).</dd>
+<!--    question 6-->
+    <dt>What happens if I get hurt?</dt>
+    <dd>Park Rangers are constantly patrolling and we ask the you stay on the trails. Please call 1(555)555-5555 and we will get help to you ASAP. All Park Rangers are trained in basic first aide and have the ability to transport. If venturing out alone please make sure at least one person knows where you are in case of an emergency.</dd>
+    <!--    question 7-->
+    <dt>What happens if I get hurt?</dt>
+    <dd>Park Rangers are constantly patrolling and we ask the you stay on the trails. Please call 1(555)555-5555 and we will get help to you ASAP. All Park Rangers are trained in basic first aide and have the ability to transport. If venturing out alone please make sure at least one person knows where you are in case of an emergency.</dd>
+    <!--    question 8-->
+    <dt>What happens if I get hurt?</dt>
+    <dd>Park Rangers are constantly patrolling and we ask the you stay on the trails. Please call 1(555)555-5555 and we will get help to you ASAP. All Park Rangers are trained in basic first aide and have the ability to transport. If venturing out alone please make sure at least one person knows where you are in case of an emergency.</dd>
+    <!--    question 9-->
+    <dt>What happens if I get hurt?</dt>
+    <dd>Park Rangers are constantly patrolling and we ask the you stay on the trails. Please call 1(555)555-5555 and we will get help to you ASAP. All Park Rangers are trained in basic first aide and have the ability to transport. If venturing out alone please make sure at least one person knows where you are in case of an emergency.</dd>
+    <!--    question 10-->
+    <dt>What happens if I get hurt?</dt>
+    <dd>Park Rangers are constantly patrolling and we ask the you stay on the trails. Please call 1(555)555-5555 and we will get help to you ASAP. All Park Rangers are trained in basic first aide and have the ability to transport. If venturing out alone please make sure at least one person knows where you are in case of an emergency.</dd>
 
+
+</dl>
+<p><a href="#">View/Hide answers</a></p>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+
+<script>
+    $("dd").addClass("invisible");
+    $("a").click(function (){
+        $("dd").toggleClass("invisible");
+    });
+
+$('dt').click(function () {
+    $(this).toggleClass('highlight');
+});
+
+</script>
 </body>
 </html>
