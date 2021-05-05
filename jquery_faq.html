@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>FAQ</title>
     <style>
+        body {
+          text-align: center;
+          background-color: #108040;
+        }
         .invisible {
             visibility: hidden;
         }
@@ -15,10 +19,34 @@
         .bgYellow {
             background-color: yellow;
         }
+
+        dt {
+            font-size: 26px;
+            font-style: oblique;
+        }
+
+        dd {
+            font-size: 16px;
+            color: white;
+        }
+
+        h3 {
+            font-size: xxx-large;
+            text-decoration: underline;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .fcBlue {
+            color: blue;
+        }
+
     </style>
 </head>
 <body>
-<h1 style="text-align: center">National Park FAQ (Top 10)</h1>
+<h1>National Park FAQ (Top 10)</h1>
 <dl>
     <!--    question 1-->
     <dt>What time does the park close?</dt>
@@ -30,7 +58,7 @@
     </dd>
     <!--    question 3-->
     <dt>Are the wild animals dangerous?</dt>
-    <dd>Yes, please do not feed or try to pet the wild animals. If see you and the party you are with may be subject to
+    <dd>Yes, please do not feed or try to pet the wild animals. If seen you and the party you are with may be subject to
         a fine of $10,000 and/or up to 3 months jail time.
     </dd>
     <!--    question 4-->
@@ -60,7 +88,7 @@
     </dd>
     <!--    question 9-->
     <dt>Are group rates available?</dt>
-    <dd>Group rates are available, please visit or admission tab or call 1(555)555-5550 for further details.</dd>
+    <dd>Group rates are available, please visit our admission tab or call 1(555)555-5550 for further details.</dd>
     <!--    question 10-->
     <dt>When is the park closed?</dt>
     <dd>The park is closed on all Federal Holidays. Please visit our calenders tab for further details.</dd>
@@ -68,8 +96,10 @@
 
 <p><a href="#">View/Hide answers</a></p>
 
+<hr>
+
 <h3 id="a-park">Arches National Park</h3>
-<ul id="arches-national-park">
+<ul id="arches-national-park" style="text-align: left">
     <li>Longest arch: Landscape Arch has a light opening 306 feet (93.3 meters) across.</li>
     <li>Tallest arch: Double Arch South has a vertical light opening of 112 feet (34.1 meters).</li>
     <li>483 species of plants</li>
@@ -77,8 +107,10 @@
 </ul>
 <input type="button" id="change-a-background" value="Change Background" />
 
+<hr>
+
 <h3 id="b-park">Badlands National Park</h3>
-<ul id="badlands-national-park">
+<ul id="badlands-national-park" style="text-align: left">
     <li>244,000 acres of scenic landscapes, incredible geological formations, diverse wildlife and much more.</li>
     <li>Great place for hiking, fossil hunting, taking a scenic drive and spotting wildlife.</li>
     <li>It’s a great place to learn about Native American history and culture.</li>
@@ -86,9 +118,11 @@
 </ul>
 <input type="button" id="change-b-background" value="Change Background"/>
 
+<hr>
+
 
 <h3 id="c-park">Carlsbad Caverns National Park</h3>
-<ul id="carlsbad-caverns-national-park">
+<ul id="carlsbad-caverns-national-park" style="text-align: left">
     <li>46,766 acres (18,925 hectares), including over 33,000 acres (13,354 hectares) designated wilderness.</li>
     <li>Lechuguilla Cave, > 140 miles (225 km); 1,604.2 feet (489 m) deep. Access to this cave is limited to research
         and exploration only.</li>
@@ -124,9 +158,17 @@
 
     });
 
+    $("h3").click(function () {
+        $("li").toggleClass("bold");
+    });
 
-    //
-    //
+    $("li").click(function(){
+        $("ul").children().first().toggleClass('fcBlue');
+    });
+
+
+
+
     // $("input").click(function(e){
     //     var idClicked = e.target.id;
     //     if(idClicked==='change-a-background')
