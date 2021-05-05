@@ -11,6 +11,10 @@
         .highlight {
             background-color: red;
         }
+
+        .bgYellow {
+            background-color: yellow;
+        }
     </style>
 </head>
 <body>
@@ -47,33 +51,51 @@
         If venturing out alone please make sure at least one person knows where you are in case of an emergency.
     </dd>
     <!--    question 7-->
-    <dt>What happens if I get hurt?</dt>
-    <dd>Park Rangers are constantly patrolling and we ask the you stay on the trails. Please call 1(555)555-5555 and we
-        will get help to you ASAP. All Park Rangers are trained in basic first aide and have the ability to transport.
-        If venturing out alone please make sure at least one person knows where you are in case of an emergency.
-    </dd>
+    <dt>Are there restrooms available?</dt>
+    <dd>Restrooms are available throughout the park.</dd>
     <!--    question 8-->
-    <dt>What happens if I get hurt?</dt>
-    <dd>Park Rangers are constantly patrolling and we ask the you stay on the trails. Please call 1(555)555-5555 and we
-        will get help to you ASAP. All Park Rangers are trained in basic first aide and have the ability to transport.
-        If venturing out alone please make sure at least one person knows where you are in case of an emergency.
+    <dt>Is camping allowed?</dt>
+    <dd>Camping is allowed in designated areas only. Please see our camping tab or call 1(555)555-5550 for
+        availability.
     </dd>
     <!--    question 9-->
-    <dt>What happens if I get hurt?</dt>
-    <dd>Park Rangers are constantly patrolling and we ask the you stay on the trails. Please call 1(555)555-5555 and we
-        will get help to you ASAP. All Park Rangers are trained in basic first aide and have the ability to transport.
-        If venturing out alone please make sure at least one person knows where you are in case of an emergency.
-    </dd>
+    <dt>Are group rates available?</dt>
+    <dd>Group rates are available, please visit or admission tab or call 1(555)555-5550 for further details.</dd>
     <!--    question 10-->
-    <dt>What happens if I get hurt?</dt>
-    <dd>Park Rangers are constantly patrolling and we ask the you stay on the trails. Please call 1(555)555-5555 and we
-        will get help to you ASAP. All Park Rangers are trained in basic first aide and have the ability to transport.
-        If venturing out alone please make sure at least one person knows where you are in case of an emergency.
-    </dd>
-
-
+    <dt>When is the park closed?</dt>
+    <dd>The park is closed on all Federal Holidays. Please visit our calenders tab for further details.</dd>
 </dl>
+
 <p><a href="#">View/Hide answers</a></p>
+
+<h3 id="a-park">Arches National Park</h3>
+<ul id="arches-national-park">
+    <li>Longest arch: Landscape Arch has a light opening 306 feet (93.3 meters) across.</li>
+    <li>Tallest arch: Double Arch South has a vertical light opening of 112 feet (34.1 meters).</li>
+    <li>483 species of plants</li>
+    <li>186 species of birds</li>
+</ul>
+<input type="button" id="change-a-background" value="Change Background" />
+
+<h3 id="b-park">Badlands National Park</h3>
+<ul id="badlands-national-park">
+    <li>244,000 acres of scenic landscapes, incredible geological formations, diverse wildlife and much more.</li>
+    <li>Great place for hiking, fossil hunting, taking a scenic drive and spotting wildlife.</li>
+    <li>It’s a great place to learn about Native American history and culture.</li>
+    <li>You can see the geologic formations and mixed-grass prairies up close.</li>
+</ul>
+<input type="button" id="change-b-background" value="Change Background"/>
+
+
+<h3 id="c-park">Carlsbad Caverns National Park</h3>
+<ul id="carlsbad-caverns-national-park">
+    <li>46,766 acres (18,925 hectares), including over 33,000 acres (13,354 hectares) designated wilderness.</li>
+    <li>Lechuguilla Cave, > 140 miles (225 km); 1,604.2 feet (489 m) deep. Access to this cave is limited to research
+        and exploration only.</li>
+    <li>The Big Room is 8.2 acres (3.3 hectares)-- the largest, readily accessible cave chamber in North America.</li>
+    <li>Since 1924, the park has had over 44,000,000 visitors.</li>
+</ul>
+<input type="button" id="change-c-background" value="Change Background" />
 
 <script src="js/jquery-3.6.0.min.js"></script>
 
@@ -86,6 +108,46 @@
     $('dt').click(function () {
         $(this).toggleClass('highlight');
     });
+
+    $("#change-a-background").click(function(){
+        $("#arches-national-park").children().last().toggleClass('bgYellow');
+
+    });
+
+    $("#change-b-background").click(function(){
+        $("#badlands-national-park").children().last().toggleClass('bgYellow');
+
+    });
+
+    $("#change-c-background").click(function(){
+        $("#carlsbad-caverns-national-park").children().last().toggleClass('bgYellow');
+
+    });
+
+
+    //
+    //
+    // $("input").click(function(e){
+    //     var idClicked = e.target.id;
+    //     if(idClicked==='change-a-background')
+    //     {
+    //         $("#arches-national-park").children().last().toggleClass('bgYellow');
+    //     }
+    //     else if (idClicked==='change-b-background')
+    //     {
+    //         $("#badlands-national-park").children().last().toggleClass('bgYellow');
+    //     }
+    //     else {
+    //         $("#carlsbad-caverns-national-park").children().last().toggleClass('bgYellow');
+    //     }
+    // });
+
+
+
+    // $("#arches-national-park").children().next().next().next().css('background-color', 'yellow');
+    // $("#badlands-national-park").children().next().next().next().css('background-color', 'yellow');
+    // $("#carlsbad-caverns-national-park").children().next().next().next().css('background-color', 'yellow');
+
 
 </script>
 </body>
