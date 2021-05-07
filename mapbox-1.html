@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flying</title>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+
+
+</head>
+<body>
+<h1>Eye in the sky</h1>
+
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+
+<script id="js/keys.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+
+<script>
+  mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
+  var map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [-74.5, 40], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+  });
+</script>
+
+
+</body>
+</html>
