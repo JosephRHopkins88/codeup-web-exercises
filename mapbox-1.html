@@ -14,10 +14,15 @@
 
 <div id='map' style='width: 400px; height: 300px;'></div>
 
-<script id="js/keys.js"></script>
+<script src="js/keys.js"></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
 
+<!--//TODO: Mini exercise #1 - Create an HTML file named mapbox-1.html. Create a map that is centered at the San Antonio Airport with the zoom set to 12.-->
+<!--//TODO: After 10 seconds, use a method found in the documentation to fly to the DFW Airport and change the map style to satellite streets.-->
+<!--//      *BONUS* Create a button labeled "Zoom In", and when the button is clicked, increases the zoom value by 1.\-->
+
 <script>
+
   mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
   var map = new mapboxgl.Map({
     container: 'map', // container ID
@@ -25,6 +30,21 @@
     center: [-74.5, 40], // starting position [lng, lat]
     zoom: 9 // starting zoom
   });
+
+  setTimeout(function() {
+      map.flyTo({
+          center: [-97.0403, 32.8998],
+          zoom: 12,
+          speed: .8
+      })
+  }, 10000)
+
+  $('#zoom').click(function() {
+      map.setZoom(map.getZoom() + 1)
+  })
+
+
+
 </script>
 
 

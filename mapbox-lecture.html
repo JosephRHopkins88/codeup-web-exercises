@@ -5,15 +5,20 @@
     <title>Mapbox API</title>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <style>
+        .popup-font {
+            font-family: Chalkboard, sans-serif;
+        }
+    </style>
 </head>
 <body>
   <h1>Welcome to my MapBox</h1>
-
+  <script src="js/keys.js"></script>
   <div id='map' style='width: 400px; height: 300px;'></div>
 
 
-<script id="js/keys.js"></script>
-<script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+
 <script>
     mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
     var map = new mapboxgl.Map({
@@ -26,7 +31,27 @@
     map.setStyle('mapbox://styles/mapbox/satellite-streets-v11')
     map.setZoom(12)
 
-    console.log(map.setStyle());
+    map.addControl(new mapboxgl.NavigationControl());
+
+    var marker = new mapboxgl.Marker({
+        color: "red",
+    })
+        .setLngLat([-98.4861, 29.4260])
+        .setDraggable(true)
+        .addTo(map);
+
+marker.on('dragend', function () {
+    alert(marker.getLngLat().toString())
+})
+
+    var popup = new mapboxgl.Popup()
+        .setLngLat(marker.getLngLat())
+        .setHTML("<h3>Hello World!</h3>")
+        .setMaxWidth("200px")
+        .addTo(map);
+
+marker.setPopup(popup);
+popup.addClassName('popup-font');
 
 
 
