@@ -125,6 +125,62 @@
     marker.setPopup();
   })
 
+  // const marker1 = new mapboxgl.Marker({
+  //   color: 'blue'
+  // })
+  //
+  //         .setLngLat([-84.697030, 44.298400])
+  //         .addTo(map);
+  //
+  // const popup1 = new mapboxgl.Popup()
+  //         .setLngLat(marker1.getLngLat())
+  //         .setHTML('<h3>Buccillis Pizza</h3>')
+  //         .addTo(map);
+  //
+  // marker1.setPopup(popup1);
+  //
+  // marker1.setDraggable(true);
+  //
+  // marker1.on('click', function(){
+  //   $('h3').html(marker1.getLngLat().toString())
+  //   marker1.setPopup();
+  // })
+
+  // const marker2 = new mapboxgl.Marker({
+  //   color: 'green'
+  // })
+  //
+  //         .setLngLat([-98.690970, 29.463750])
+  //         .addTo(map);
+  //
+  // const popup2 = new mapboxgl.Popup()
+  //         .setLngLat(marker2.getLngLat())
+  //         .setHTML('<h3>Rudys BBQ</h3>')
+  //         .addTo(map);
+  //
+  // marker2.setPopup(popup2);
+  //
+  // marker2.setDraggable(true);
+  //
+  // marker2.on('click', function(){
+  //   $('h3').html(marker2.getLngLat().toString())
+  //   marker2.setPopup();
+  // })
+
+
+
+  var markers = new mapboxgl.Marker()
+          .setLngLat([-83.067630, 42.491940])
+          .addTo(map);
+
+  setTimeout(function() {
+    map.flyTo({
+      center: [-84.697030, 44.298400],
+      zoom: 12,
+      speed: .8
+    })
+  }, 15000)
+
   const marker1 = new mapboxgl.Marker({
     color: 'blue'
   })
@@ -146,6 +202,14 @@
     marker1.setPopup();
   })
 
+  setTimeout(function() {
+    map.flyTo({
+      center: [-98.690970, 29.463750],
+      zoom: 12,
+      speed: .8
+    })
+  }, 25000)
+
   const marker2 = new mapboxgl.Marker({
     color: 'green'
   })
@@ -166,28 +230,6 @@
     $('h3').html(marker2.getLngLat().toString())
     marker2.setPopup();
   })
-
-
-
-  var markers = new mapboxgl.Marker()
-          .setLngLat([-83.067630, 42.491940])
-          .addTo(map);
-
-  setTimeout(function() {
-    map.flyTo({
-      center: [-84.697030, 44.298400],
-      zoom: 12,
-      speed: .8
-    })
-  }, 15000)
-
-  setTimeout(function() {
-    map.flyTo({
-      center: [-98.690970, 29.463750],
-      zoom: 12,
-      speed: .8
-    })
-  }, 25000)
 
   $('#zoom').click(function() {
     map.setZoom(map.getZoom() + 1)
