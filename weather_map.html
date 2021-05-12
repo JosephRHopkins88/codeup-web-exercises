@@ -6,6 +6,7 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
     <script src="js/mapbox-geocoder-utils.js"></script>
     <script src="js/weather_map.js"></script>
+    <script src="css/weather_map.css"></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet'/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -25,7 +26,7 @@
 
         .map {
             position: absolute;
-            top: 68%;
+            top: 60%;
             width: 100%;
             bottom: 0;
         }
@@ -42,9 +43,10 @@
         }
 
         .card-body {
-            background-color: #1c6db3;
-            color: white;
+            background-color: white;
+            color: black;
             align-items: center;
+            height: 420px;
         }
 
         #currentCity {
@@ -59,7 +61,33 @@
         }
 
         #search {
-            margin: -20px 1100px 0 40px;
+            width: 25%;
+            margin-left: 40px;
+            margin-top: -30px;
+        }
+
+        .btn {
+
+        }
+
+        hr {
+            height: 3px;
+        }
+
+        form {
+            position: relative;
+        }
+
+        /*input {*/
+        /*    width: 100%;*/
+        /*    padding-right: 40px;*/
+        /*}*/
+
+        button {
+
+            position: absolute;
+            top: 0;
+            right: 0;
         }
 
     </style>
@@ -85,6 +113,7 @@
         <div class="card-body">
             <h4 id="todayDate0" class="card-title"></h4>
             <div id="icon0" class="card-text"></div>
+            <hr>
             <div id="temp0" class="card-text"></div>
             <div id="wind_speed0" class="card-text"></div>
             <div id="sunrise0" class="card-text"></div>
@@ -95,6 +124,7 @@
         <div class="card-body">
             <h4 id="todayDate1" class="card-title"></h4>
             <div id="icon1" class="card-text"></div>
+            <hr>
             <div id="temp1" class="card-text"></div>
             <div id="wind_speed1" class="card-text"></div>
             <div id="sunrise1" class="card-text"></div>
@@ -105,6 +135,7 @@
         <div class="card-body">
             <h4 id="todayDate2" class="card-title"></h4>
             <div id="icon2" class="card-text"></div>
+            <hr>
             <div id="temp2" class="card-text"></div>
             <div id="wind_speed2" class="card-text"></div>
             <div id="sunrise2" class="card-text"></div>
@@ -115,6 +146,7 @@
         <div class="card-body">
             <h4 id="todayDate3" class="card-title"></h4>
             <div id="icon3" class="card-text"></div>
+            <hr>
             <div id="temp3" class="card-text"></div>
             <div id="wind_speed3" class="card-text"></div>
             <div id="sunrise3" class="card-text"></div>
@@ -125,6 +157,7 @@
         <div class="card-body">
             <h4 id="todayDate4" class="card-title"></h4>
             <div id="icon4" class="card-text"></div>
+            <hr>
             <div id="temp4" class="card-text"></div>
             <div id="wind_speed4" class="card-text"></div>
             <div id="sunrise4" class="card-text"></div>
@@ -269,7 +302,7 @@ console.log(feature);
                 for (var i = 0; i < 5; i++) {
                     document.getElementById("todayDate" + i).innerHTML = new Date(resp.daily[i].dt*1000).toDateString();
                     document.getElementById("icon" + i).innerHTML = "<img src='http://openweathermap.org/img/wn/" + resp.daily[i].weather[0].icon + "@2x.png' alt='The weather icon'/>";
-                    document.getElementById("temp" + i).innerHTML = "Temperature:<br/>Morning:" + resp.daily[i].temp.morn.toFixed(0) + "<br/>Day:" + resp.daily[i].temp.day.toFixed(0) + "<br/>Evening:" + resp.daily[i].temp.eve.toFixed(0) + "<br/>Night:" + resp.daily[i].temp.night.toFixed(0) + "<br/>Min:" + resp.daily[i].temp.min.toFixed(0) + "<br/>Max:" + resp.daily[i].temp.max.toFixed(0);
+                    document.getElementById("temp" + i).innerHTML = "Temperature:<br/>Morning:" + resp.daily[i].temp.morn.toFixed(0) + "&#8457;" + "<br/>Day:" + resp.daily[i].temp.day.toFixed(0) + "&#8457;" + "<br/>Evening:" + resp.daily[i].temp.eve.toFixed(0) + "&#8457;" + "<br/>Night:" + resp.daily[i].temp.night.toFixed(0) + "&#8457;" + "<br/>Min:" + resp.daily[i].temp.min.toFixed(0) + "&#8457;" + "<br/>Max:" + resp.daily[i].temp.max.toFixed(0) + "&#8457;";
                     document.getElementById("wind_speed" + i).innerHTML = "Wind speed: " + resp.daily[i].wind_speed;
                     document.getElementById("sunrise" + i).innerHTML = "Sunrise: " + new Date(resp.daily[i].sunrise*1000).toLocaleTimeString();
                     document.getElementById("sunset" + i).innerHTML = "Sunset: " + new Date(resp.daily[i].sunset*1000).toLocaleTimeString();
