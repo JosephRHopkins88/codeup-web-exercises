@@ -15,3 +15,6 @@ for (let i = 1; i <= 30; i++)
         console.log(i + " ");
 }
 
+const returnSeven = () => 7;
+
+const multiplyByFive = num => typeof num === "number" ? num * 5 : 0;
